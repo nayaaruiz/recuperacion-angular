@@ -1,0 +1,15 @@
+<div class="container m-2">
+    @if (character) {
+        <h2>{{ character.name }}</h2>
+        <ul class="list-group">
+            <li class="list-group-item">{{ character.image }}</li>
+            <li class="list-group-item">{{ character.species }}</li>
+            <li class="list-group-item">{{ character.gender }}</li>
+            <li class="list-group-item">{{ character.origin }}</li>
+            <li class="list-group-item">{{ character.episode }}</li>
+        </ul>
+        <button routerLink="/home">Volver al listado</button>
+    }@else {
+        <p>Loading character...</p>
+    }
+</div>

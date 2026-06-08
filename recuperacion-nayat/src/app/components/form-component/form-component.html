@@ -1,0 +1,11 @@
+<div class="container m-2">
+    <form [formGroup]="filterForm" (ngSubmit)="onSubmit()">
+        <label for="name">Nombre: </label>
+        <input id="name" type="text" filterForm="name" />
+        <label for="status">Estado: </label>
+        <input id="status" type="select" filterForm="status" />
+        <label for="specie">Ver solo especie humana </label>
+        <input id="specie" type="checkbox" filterForm="specie" />
+        <button type="submit" [disabled]="!filterForm.valid">Submit</button>
+    </form>
+</div>

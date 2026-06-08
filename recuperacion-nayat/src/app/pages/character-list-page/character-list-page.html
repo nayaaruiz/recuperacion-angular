@@ -1,0 +1,17 @@
+<div class="container m-4">
+    <h1 class="mb-4">Character List</h1>
+    <div class="row justify-content-center">
+        @for(character of characters; track $index) {
+            <div class="col-3">
+                <div class="card">
+                    <img class="card-img-top" [src]="character.image">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ character.name }}</h5>
+                        <p class="card-text">{{ character.status }}</p>
+                        <button class="btn btn-success" routerLink="/character/index">Ver detalle</button>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>
